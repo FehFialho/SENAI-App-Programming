@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://i.pinimg.com/736x/53/59/8a/53598abc80aa3267e7e8a0f77b4c6ce9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#oia-cat{
+    width: 300px;   
+    height: 300px;  
+    background-image: url('./Assets/oiia-cat.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+#oia-cat:hover{
+    background-image: url('./Assets/spining-cat.png');
+}
