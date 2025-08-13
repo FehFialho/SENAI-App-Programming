@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(91, 122, 91);
+}
+
+nav{
+    padding: 20px 50px;
+    background-color: rgb(185, 170, 101);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 240, 217);
+    font-weight: 600;
+}
+
+.cards{
+    display: flex;
+    justify-content: left;
+}
+
+.green{
+    background-color: rgb(119, 100, 84);
+}
+
+.red{
+    background-color: rgb(161, 67, 67);
+}
+
+.quadrado{
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    border-radius: 15px;
+    padding: 10px 50px;
+}
+
+.position{
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title{
+    font-size: 22px;
+}
+
+.list{
+    font-size: 18px;
+}
