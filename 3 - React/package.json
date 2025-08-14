@@ -1,0 +1,11 @@
+{
+  "name": "3---react",
+  "version": "1.0.0",
+  "description": "React Lesson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernanda Klechowicz Fialho",
+  "license": "ISC"
+}
