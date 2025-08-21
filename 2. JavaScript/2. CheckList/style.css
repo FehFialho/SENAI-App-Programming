@@ -29,12 +29,14 @@ body {
 #to-do-div {
     padding: 40px 35px;
     height: auto;
-    width: 40%;
+    width: 50%;
+    border-radius: 12px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    
     background: linear-gradient(180deg, #d1b970, #ccba82);
 }
 
@@ -46,7 +48,7 @@ body {
     background-color: transparent;
 }
 
-#main-input{
+#task-input{
     padding: 10px 15px;
     flex: 1;
     border: none;
@@ -58,7 +60,7 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-#main-button{
+#task-add{
     border-radius: 10px;
     background-color: #520c07;
     width: 30%;
@@ -68,7 +70,7 @@ body {
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-#main-button:hover{
+#task-add:hover{
     background-color: #792f29;
     color: #f3de9d;
     transform: scale(0.95);
@@ -94,7 +96,7 @@ body {
 .task-p {
     margin: 0px 5px;
     font-family: "Special Gothic Expanded One", sans-serif;
-    color: #793029e1;
+    color: #722720f5;
 }
 
 .task-del {
