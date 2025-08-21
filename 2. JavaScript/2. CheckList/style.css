@@ -12,8 +12,13 @@ body {
 .main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
+}
+
+#logo{
+    margin: 20px;
+    width: 100px;
 }
 
 .title{
