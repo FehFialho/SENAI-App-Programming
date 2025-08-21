@@ -21,18 +21,21 @@ body {
     color: #520c07;
     background-color: transparent;
     padding: 20px 0px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #to-do-div {
     padding: 40px 35px;
     height: auto;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    background: linear-gradient(180deg, #d1b970, #f3de9d);
+    background: linear-gradient(180deg, #d1b970, #ccba82);
 }
 
 #input-section{
@@ -50,7 +53,7 @@ body {
     border-radius: 8px;
     outline: none;
     font-size: 16px;
-    background-color: #f3de9d;
+    background: #ecddb085;
     color: #333;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -71,7 +74,39 @@ body {
     transform: scale(0.95);
 }
 
-.task{
-    background-color: #792f29;
-    border-radius: 5px;
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ecddb085;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.task-p {
+    margin: 0px 5px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #793029e1;
+}
+
+.task-del {
+    border: none;
+    background: #75160b;
+    color: rgb(216, 212, 157);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.task-del:hover {
+    transform: scale(0.9);   
 }
