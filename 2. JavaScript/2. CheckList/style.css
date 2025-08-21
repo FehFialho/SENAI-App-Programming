@@ -32,12 +32,40 @@ body {
     width: 50%;
     border-radius: 12px;
 
+    max-height: 80vh; 
+    overflow-y: auto;
+    overflow-x: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    background: linear-gradient(180deg, #d1b970, #ccba82);
+    background: linear-gradient(
+    180deg,       /* direção vertical */
+    #d1b970 0%,   /* cor topo */
+    #c4b075 50%,  /* cor clara no meio */
+    #ccba82 100%  /* cor base */
+);
+}
+
+#to-do-div::-webkit-scrollbar {
+  width: 12px;
+}
+
+#to-do-div::-webkit-scrollbar-track {
+  background: #f3de9d; 
+  border-radius: 4px;
+}
+
+#to-do-div::-webkit-scrollbar-thumb {
+  background: #660B05; 
+  border-radius: 4px;
+  border: 1px solid #f3de9d;
+}
+
+#to-do-div::-webkit-scrollbar-thumb:hover {
+  background: #4a0301; 
 }
 
 #input-section{
@@ -63,11 +91,13 @@ body {
 #task-add{
     border-radius: 10px;
     background-color: #520c07;
-    width: 30%;
+    width: 20%;
     padding: 10px 15px;
-    color: #f3de9d;
-    font-weight: bold;
     transition: transform 0.2s ease, background-color 0.3s ease;
+    
+    color: #ebd48f;
+    font-weight: 300;
+    font-family: "Special Gothic Expanded One", sans-serif;
 }
 
 #task-add:hover{
@@ -88,7 +118,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: #ecddb085;
-    padding: 10px;
+    padding: 15px;
     margin: 10px 0;
     border-radius: 6px;
 }
@@ -100,12 +130,15 @@ body {
 }
 
 .task-del {
+    align-self: flex-start;
     border: none;
+    padding: 6px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+
     background: #75160b;
     color: rgb(216, 212, 157);
-    padding: 6px 10px;
     border-radius: 4px;
-    cursor: pointer;
     transition: transform 0.2s ease;
 }
 
