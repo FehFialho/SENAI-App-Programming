@@ -1,6 +1,5 @@
 // Fun Site - https://clickclickclick.click/#2ca40fde22ac654018b13e8c9990c6e9
 
-
 let title = document.getElementById('header');
 let input = document.getElementById('input');
 let colorPicker = document.getElementById('color-picker');
