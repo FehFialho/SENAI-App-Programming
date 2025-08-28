@@ -1,13 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // Hello's
-import { HelloArrow } from '../components/HelloArrow.jsx'
-import { HelloDeclaration } from '../components/HelloDeclaration.jsx'
-import { HelloExpression } from '../components/HelloExpression.jsx'
+import { HelloArrow } from '../components/Hellos/HelloArrow.jsx'
+import { HelloDeclaration } from '../components/Hellos/HelloDeclaration.jsx'
+import { HelloExpression } from '../components/Hellos/HelloExpression.jsx'
 // Square's
-import { RedSquare } from '../components/RedSquare.jsx'
-import { YellowSquare } from '../components/YellowSquare.jsx'
-import { BlueSquare } from '../components/BlueSquare.jsx'
+import { RedSquare } from '../components/Squares/RedSquare.jsx'
+import { YellowSquare } from '../components/Squares/YellowSquare.jsx'
+import { BlueSquare } from '../components/Squares/BlueSquare.jsx'
+
+import { Square, SquareClass } from '../components/Square.jsx'
 // Other
 import { RowFlex } from '../components/RowFlex.jsx'
 
@@ -17,17 +19,16 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-    {/* <RowFlex> */}
-      <RedSquare></RedSquare>
-      <BlueSquare></BlueSquare>
+      {/* <RedSquare></RedSquare>
+      <BlueSquare></BlueSquare> */}
       <YellowSquare></YellowSquare>
-    {/* </RowFlex> */}
 
-    {/* <RowFlex> */}
-      <HelloArrow></HelloArrow>
+      {/* <HelloArrow></HelloArrow>
       <HelloDeclaration></HelloDeclaration>
-      <HelloExpression></HelloExpression>
-    {/* </RowFlex> */}
+      <HelloExpression></HelloExpression> */}
+
+    <Square color={"white"}></Square>
+    <SquareClass chosenClass="red"></SquareClass>
     
   </StrictMode>,
 )
