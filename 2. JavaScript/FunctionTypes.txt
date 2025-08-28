@@ -1,0 +1,17 @@
+// 1. Function Declaration (Regular function)
+function sum(a, b) {
+    return a + b;
+}
+
+// 2. Function Expression (Function assigned to a variable)
+const sumExpr = function(a, b) {
+    return a + b;
+};
+
+// 3. Arrow Function
+const sumArrow = (a, b) => a + b;
+
+// Testing all three functions
+console.log(sum(5, 3));       // 8
+console.log(sumExpr(5, 3));   // 8
+console.log(sumArrow(5, 3));  // 8

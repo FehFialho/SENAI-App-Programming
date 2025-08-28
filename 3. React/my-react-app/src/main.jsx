@@ -15,6 +15,7 @@ import { RowFlex } from '../components/RowFlex.jsx'
 
 import './index.css'
 import App from './App.jsx'
+import { MyInput } from '../components/MyInput.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
       {/* <HelloArrow></HelloArrow>
       <HelloDeclaration></HelloDeclaration>
       <HelloExpression></HelloExpression> */}
+    <MyInput></MyInput>
 
     <Square color={"white"}></Square>
     <SquareClass chosenClass="red"></SquareClass>
