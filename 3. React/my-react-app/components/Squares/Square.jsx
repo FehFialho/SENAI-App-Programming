@@ -1,5 +1,5 @@
 // Square with Props to Add Color
-import './MyStyle.css'
+import '../MyStyle.css'
 
 export const Square = ({color}) => {
     return <div className='square' style={{backgroundColor: color}}></div>
