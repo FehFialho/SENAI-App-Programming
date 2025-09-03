@@ -34,15 +34,6 @@ createRoot(document.getElementById('root')).render(
       <HelloExpression></HelloExpression> */}
     
     <MyInput></MyInput>
-    <ButtonDissapear></ButtonDissapear>
-    <BtnColor></BtnColor>
-    <BtnCount></BtnCount>
-
-    <LearnUseEffect></LearnUseEffect>
-
-    {/* <YellowSquare></YellowSquare>
-    <Square color={"white"}></Square>
-    <SquareClass chosenClass="red"></SquareClass> */}
     
   </StrictMode>,
 )
