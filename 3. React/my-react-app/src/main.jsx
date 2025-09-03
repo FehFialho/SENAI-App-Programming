@@ -18,6 +18,7 @@ import { BtnCount } from '../components/Button/BtnCount.jsx'
 // Other
 import { RowFlex } from '../components/RowFlex.jsx'
 import { MyInput } from '../components/MyInput.jsx'
+import { LearnUseEffect } from '../components/UseEffect/LearnUseEffect.jsx'
 
 import './index.css'
 import App from './App.jsx'
@@ -31,15 +32,17 @@ createRoot(document.getElementById('root')).render(
       {/* <HelloArrow></HelloArrow>
       <HelloDeclaration></HelloDeclaration>
       <HelloExpression></HelloExpression> */}
+    
     <MyInput></MyInput>
     <ButtonDissapear></ButtonDissapear>
     <BtnColor></BtnColor>
     <BtnCount></BtnCount>
 
+    <LearnUseEffect></LearnUseEffect>
 
-    <YellowSquare></YellowSquare>
+    {/* <YellowSquare></YellowSquare>
     <Square color={"white"}></Square>
-    <SquareClass chosenClass="red"></SquareClass>
+    <SquareClass chosenClass="red"></SquareClass> */}
     
   </StrictMode>,
 )
