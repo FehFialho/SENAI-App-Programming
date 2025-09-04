@@ -5,9 +5,11 @@ import App from './App.jsx'
 import { Clock } from '../components/Clock.jsx'
 import { Timer } from '../components/Timer.jsx'
 import { Counter } from '../components/Counter.jsx'
+import { Title } from '../components/Title.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Title></Title>
     {/* <App /> */}
     <Clock></Clock>
     {/* <Timer></Timer> */}

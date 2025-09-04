@@ -1,15 +1,19 @@
-import { useState } from "react"
+import { useState } from "react";
+import { Title } from "./Title";
 
 export const Counter = () => {
-    const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-    return (
-        <>
-            <h3>{count}</h3>
-            <div>
-                <button onClick={() => setCount(count + 1)}>+</button>
-                <button onClick={() => count === 0 ? 0 : setCount(count - 1)}>-</button>
-            </div>
-        </>
-    )
-}
+  return (
+    <div>
+      {/* Send Props to Title Component */}
+      <Title count={count} />
+
+      <h3>Number of Tasks - {count}</h3>
+      <section>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount(Math.max(0, count - 1))}>-</button>
+      </section>
+    </div>
+  );
+};
