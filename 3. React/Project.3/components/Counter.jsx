@@ -9,7 +9,7 @@ export const Counter = () => {
       {/* Send Props to Title Component */}
       <Title count={count} />
 
-      <h3>Number of Tasks - {count}</h3>
+      <h3>Number of Tasks: {count}</h3>
       <section>
         <button onClick={() => setCount(count + 1)}>+</button>
         <button onClick={() => setCount(Math.max(0, count - 1))}>-</button>

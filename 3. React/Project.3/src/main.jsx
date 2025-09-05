@@ -8,11 +8,13 @@ import { Counter } from '../components/Counter.jsx'
 import { Title } from '../components/Title.jsx'
 import { Twinkle } from '../components/Twinkle.jsx'
 import { TrafficLight } from '../components/TrafficLight.jsx'
+import { EvenOdd } from '../components/EvenOdd.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Title></Title>
-    <TrafficLight></TrafficLight>
+    <EvenOdd></EvenOdd>
+    {/* <TrafficLight></TrafficLight> */}
     {/* <Twinkle></Twinkle> */}
     {/* <App /> */}
     <Clock></Clock>
