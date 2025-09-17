@@ -31,11 +31,11 @@ export const Header = () => {
             <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
 
                 <Link to={`/user/${prop1}`}>
-                    <button>1. User</button>
+                    <button>1. User (id)</button>
                 </Link>
                 
                 <Link to={`/product/${prop2}/${prop1}`}>
-                    <button>2. Product</button>
+                    <button>2. Product (id/category)</button>
                 </Link>
                 
             </div>
