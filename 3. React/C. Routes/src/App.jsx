@@ -4,6 +4,8 @@ import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Profile } from './pages/Profile'
 import { Product } from './pages/Product'
+import { UserList } from './components/UserList'
+import { UserPage } from './pages/UserPage'
 
 function App() {
 
@@ -19,6 +21,11 @@ function App() {
         <Route path='/user/:userid' element={<Profile></Profile>}></Route> 
         {/* Exercise 2 */}
         <Route path='/product/:category/:id' element={<Product></Product>}></Route>
+        
+        {/* User List */}
+        <Route path='/userlist' element={<UserList></UserList>}></Route>
+        <Route path='/userlist/:id' element={<UserPage></UserPage>}></Route>
+
 
       </Routes>
     </BrowserRouter>

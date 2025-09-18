@@ -38,6 +38,9 @@ export const Header = () => {
                     <button>2. Product (id/category)</button>
                 </Link>
                 
+                <Link to={`/userlist/${prop1}`}>
+                    <button>3. UserList (id)</button>
+                </Link>
             </div>
         </>
     )
