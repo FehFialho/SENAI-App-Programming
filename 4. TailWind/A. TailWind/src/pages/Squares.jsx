@@ -15,10 +15,10 @@ export const Squares = () => {
                     <div className="bg-lime-800 h-15 w-15"></div>
                 </div>
 
-                <div className="bg-red-900 h-50 w-50 flex justify-start">
+                <div className="bg-red-900 h-50 w-50 flex flex-col justify-between">
                     <div className="bg-lime-800 h-15 w-15"></div>
                     {/* Não pegou just self */}
-                    <div className="bg-lime-800 h-15 w-15 self-end justify-self-end"></div> 
+                    <div className="bg-lime-800 h-15 w-15 self-end"></div> 
                 </div>
 
                 <div className="bg-red-900 h-50 w-50 flex justify-start items-start">
@@ -29,15 +29,15 @@ export const Squares = () => {
             {/* Line 2 */}
             <div className="flex w-screen h-[30%] bg-amber-300 justify-between items-center">
                 
-                <div className="bg-red-900 h-50 w-50 flex justify-center items-start">
+                <div className="bg-red-900 h-50 w-50 flex justify-center">
                     <div className="bg-lime-800 h-15 w-15"></div>
                 </div>
 
-                <div className="bg-red-900 h-50 w-50 flex">
-                    <div className="bg-lime-800 h-15 w-15"></div>
-                    <div className="bg-lime-800 h-15 w-15"></div>
-                    <div className="bg-lime-800 h-15 w-15"></div>
-                    <div className="bg-lime-800 h-15 w-15"></div>
+                <div className="bg-red-900 h-50 w-50 grid grid-cols-2">
+                    <div className="bg-lime-800 h-15 w-15 p-4 text-center row-start-1 col-start-2"></div>
+                    <div className="bg-lime-800 h-15 w-15 p-4 text-center row-start-2 col-start-1"></div>
+                    <div className="bg-lime-800 h-15 w-15 text-center row-start-2 col-start-3"></div>
+                    <div className="bg-lime-800 h-15 w-15 text-center row-start-3 col-start-2"></div>
                 </div>
                 
                 <div className="bg-red-900 h-50 w-50 flex justify-center items-start">
@@ -48,10 +48,10 @@ export const Squares = () => {
             {/* Line 3 */}            
             <div className="flex w-screen h-[30%] bg-green-800 justify-between items-end">
 
-                <div className="bg-red-900 h-50 w-50 flex justify-end items-end">
+                <div className="bg-red-900 h-50 w-50 flex flex-col justify-between">
                     {/* justify-self-start não funciona */}
-                    <div className="bg-lime-800 h-15 w-15 self-start justify-self-start"></div>
-                    <div className="bg-lime-800 h-15 w-15"></div>
+                    <div className="bg-lime-800 h-15 w-15 self-start"></div>
+                    <div className="bg-lime-800 h-15 w-15 self-end"></div>
                 </div>
 
                 <div className="bg-red-900 h-50 w-50 flex justify-center items-center">
