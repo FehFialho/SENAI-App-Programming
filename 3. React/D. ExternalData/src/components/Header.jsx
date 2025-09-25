@@ -12,6 +12,10 @@ export const Header = () => {
                 <button>Cat</button>
             </Link>
 
+            <Link to={`/users`}>
+                <button>Users</button>
+            </Link>
+
         </div>
     )
 }
