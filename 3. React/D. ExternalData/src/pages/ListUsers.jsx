@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export const GetUsers = () => {
+export const ListUsers = () => {
 
     const [user, setUser] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         getUsers();
-    })
+    }, [])
 
     const getUsers = async () => {
         const response = await axios.get('https://jsonplaceholder.typicode.com/users')
@@ -16,12 +17,16 @@ export const GetUsers = () => {
         setUser(response.data)
     }
 
+    const openUserProfile = (user) => {
+        navigate('/profile', {state: {user}})
+    }
+
     return(
         <>
             <h1>Registred Users</h1>
             {
                 user.map(user => (
-                    <li style={{ listStyle: "none"}} key={user.id}>
+                    <li style={{ listStyle: "none", cursor:'pointer' }} key={user.id} onClick={()=> openUserProfile(user)}>
                     {user.id} - {user.name}
                     </li>
                 ))

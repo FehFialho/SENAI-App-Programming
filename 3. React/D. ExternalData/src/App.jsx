@@ -2,7 +2,8 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Cat } from './pages/Cat'
 import { Home } from './pages/Home'
-import { GetUsers } from './pages/GetUsers'
+import { ListUsers } from './pages/ListUsers'
+import { Profile } from './pages/Profile'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
         <Route path='/cat' element={<Cat></Cat>}></Route> 
 
         {/* Users API Exercise*/}
-        <Route path='/users' element={<GetUsers></GetUsers>}></Route> 
+        <Route path='/users' element={<ListUsers></ListUsers>}></Route> 
+        <Route path='/profile' element={<Profile></Profile>}></Route> 
 
       </Routes>
     </BrowserRouter>
