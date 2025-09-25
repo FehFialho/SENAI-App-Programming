@@ -1,26 +1,22 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import axios from 'axios'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Cat } from './pages/Cat'
+import { Home } from './pages/Home'
 
 function App() {
-  const [cat, setCat] = useState({})
-
-  const getCat = async () => {
-    const response = await axios.get('https://cataas.com/cat')
-    setCat(response.data)
-    console.log(response.data)
-  }
-
-  useEffect(() => {
-    getCat()
-  }, [])
 
   return (
-    <>
-      {cat.url && <img src={cat.url} alt="Cat" />}
-      {/* <img src={cat.url} alt="Cat" /> */}
-      <button onClick={getCat}>Get Cat</button>
-    </>
+    <BrowserRouter>
+      <Routes>
+
+        {/* Default */}
+        <Route path='/' element={<Home></Home>}></Route>
+
+        {/* Cat API Exercise*/}
+        <Route path='/cat' element={<Cat></Cat>}></Route> 
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
