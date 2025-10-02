@@ -4,17 +4,17 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const ListMonsters = ()=>{
 
-    const [monster, setMonster] = useState([])
+    const [monsters, setMonsters] = useState([])
     const navigate = useNavigate()
 
-    const getMonster = async () => {
+    const getMonsters = async () => {
         const response = await axios.get('https://www.dnd5eapi.co/api/monsters/')
         console.log(response.data.results)
-        setMonster(response.data.results)
+        setMonsters(response.data.results)
     }
 
     useEffect(() => {
-        getMonster();
+        getMonsters();
     }, [])
 
 
@@ -25,13 +25,17 @@ export const ListMonsters = ()=>{
     return(
         <>
             <h1>Monsters Wiki</h1>
-            {
-                monster.map(monster => (
-                    <li style={{ listStyle: "none", cursor:'pointer' }} key={monster.index} onClick={()=> viewMonsterInfo(monster)}>
-                        {monster.name}
-                    </li>
-                ))
-            }
+            <ul className="flex w-screen items-center justify-center">
+                {monsters.map(monster => (
+                <li className="justify-center"
+                    key={monster.index}
+                    style={{ listStyle: "none", cursor: 'pointer' }}
+                    onClick={() => viewMonsterInfo(monster)}
+                >
+                    {monster.name}
+                </li>
+                ))}
+            </ul>
             <Link to={`/`}> <button style={{margin:'2rem'}}>Go Home</button> </Link>
         </>
     )
