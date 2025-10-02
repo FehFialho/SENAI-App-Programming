@@ -24,11 +24,12 @@ export const ListMonsters = ()=>{
 
     return(
         <>
-            <h1>Monsters Wiki</h1>
-            <ul className="flex w-screen items-center justify-center">
+            <h1 className="bg-red-600">Monsters Wiki</h1>
+            <ul className="flex flex-col w-screen items-center justify-center min-h-screen">
                 {monsters.map(monster => (
-                <li className="justify-center"
+                <li 
                     key={monster.index}
+                    className="justify-center list-none cursor-pointer my-2"
                     style={{ listStyle: "none", cursor: 'pointer' }}
                     onClick={() => viewMonsterInfo(monster)}
                 >
