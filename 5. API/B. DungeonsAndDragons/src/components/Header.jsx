@@ -8,6 +8,10 @@ export const Header = () => {
                 <button>Home</button>
             </Link>
 
+            <Link to={`/monsters`}>
+                <button>Monsters</button>
+            </Link>
+
         </div>
     )
 }
