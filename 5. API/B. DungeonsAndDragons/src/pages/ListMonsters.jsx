@@ -23,9 +23,9 @@ export const ListMonsters = ()=>{
     }
 
     return(
-        <>
-            <h1 className="bg-red-600">Monsters Wiki</h1>
-            <ul className="flex flex-col w-screen items-center justify-center min-h-screen">
+        <div className="bg-amber-200">
+            <h1 className="bg-yellow-500 text-white text-center p-3 mb-2">Monsters Wiki</h1>
+            <ul className="flex flex-col w-screen items-center justify-center min-h-scree">
                 {monsters.map(monster => (
                 <li 
                     key={monster.index}
@@ -38,6 +38,6 @@ export const ListMonsters = ()=>{
                 ))}
             </ul>
             <Link to={`/`}> <button style={{margin:'2rem'}}>Go Home</button> </Link>
-        </>
+        </div>
     )
 }
