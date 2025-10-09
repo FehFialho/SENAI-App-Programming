@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+function Profile({name, age, color}){
+  return(
+    <>
+      <h1>Name: {name}</h1>
+      <h1>Age: {age}</h1>
+      <h1>Color: {color}</h1>
+    </>
+  )
+}
+
 function App() {
   const [value, setValue] = useState(0)
   const [text, setText] = useState("")
@@ -22,6 +32,8 @@ function App() {
         show &&
         <h1>Secret Content</h1>
       }
+
+      <Profile name={"JoyJoy"} age={19} color={"purple"}/>
     </>
   )
 }
