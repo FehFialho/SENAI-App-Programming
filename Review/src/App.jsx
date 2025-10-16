@@ -1,15 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-
-function Profile({name, age, color}){
-  return(
-    <>
-      <h1>Name: {name}</h1>
-      <h1>Age: {age}</h1>
-      <h1>Color: {color}</h1>
-    </>
-  )
-}
+import { Profile } from '../components/Profile'
+import { MyButton } from '../components/MyButton'
+import axios from 'axios'
 
 function App() {
   const [value, setValue] = useState(0)
@@ -19,6 +12,24 @@ function App() {
   useEffect(() => {
     console.log("Testing UseEffect");
   }, [value])
+
+//https://jsonplaceholder.typicode.com/users -> Array
+//https://dog.ceo/api/breeds/image/random -> Objeto
+
+const [dog, setDog] = useState({})
+const [users, setUsers] = useState([])
+
+const getDogData = async() => {
+  const response = await axios.get("https://dog.ceo/api/breeds/image/random")
+  setDog(response.data) // Sempre padrão
+  console.log(response.data)
+}
+
+const getUsersData = async() => {
+  const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+  setUsers(response.data)
+  console.log(response.data)
+}
 
   return (
     <>
@@ -33,9 +44,23 @@ function App() {
         <h1>Secret Content</h1>
       }
 
-      <Profile name={"JoyJoy"} age={19} color={"purple"}/>
+      {/* Props */}
+      <Profile name={"JoyJoy"} age={29} color={"purple"}/> 
+
+      <MyButton onClick={() => getDogData()} color={"bg-red-500"} content={"Get Dog"} width={"w-48"} heigth={"h=24"} hover={"bg-red-700"}></MyButton>
+
+      <button onClick={()=> getDogData()}>Get Dog 2 </button>
+
+      <img src={dog.message} alt="Doguinho" />
+
+      <button onClick={()=> getUsersData()}>Get Users</button>
+      {
+        users.map(user => <><br></br><span>{user.name}</span></>)
+      }
     </>
   )
 }
 
 export default App
+
+// 
